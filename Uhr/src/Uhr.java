@@ -10,8 +10,7 @@ public class Uhr {
     public void zeichneUhr()
     {
         int stunde = Hilfe.stunde();
-
-        //Seperate ech Digit of Number
+        //Seperate each Digit of Number
         int[] parsedStunde = {0, 0};
         //If Number lowet than 10, add a "0" in front
         if(stunde < 10)
@@ -40,7 +39,6 @@ public class Uhr {
         }
 
         int sekunde = Hilfe.sekunde();
-
         int[] parsedSekunde = {0, 0};
         if(sekunde < 10)
         {
@@ -53,17 +51,15 @@ public class Uhr {
             parsedSekunde[1] = Integer.parseInt(Integer.toString(sekunde).substring(1, 2));
         }
 
-        //System.out.println(parsedStunde[0] + "" + parsedStunde[1] + ":" + parsedMinute[0] + "" + parsedMinute[1]);
-
         //Draw every number, add a separator each Hour/Minute
-        zeichenZahl(0, parsedStunde[0]);
-        zeichenZahl(1, parsedStunde[1]);
-        block.createSeperator(2);
-        zeichenZahl(3, parsedMinute[0]);
-        zeichenZahl(4, parsedMinute[1]);
-        block.createSeperator(5);
-        zeichenZahl(6, parsedSekunde[0]);
-        zeichenZahl(7, parsedSekunde[1]);
+        zeichenZahl(0, parsedStunde[0]); //10th Hour
+        zeichenZahl(1, parsedStunde[1]); //1st Hour
+        block.createSeperator(2); //Seperator (:)
+        zeichenZahl(3, parsedMinute[0]); //10th Minute
+        zeichenZahl(4, parsedMinute[1]); //1st Minute
+        block.createSeperator(5); //Seperator (:)
+        zeichenZahl(6, parsedSekunde[0]); //10th Second
+        zeichenZahl(7, parsedSekunde[1]); //1st Second
     }
 
 

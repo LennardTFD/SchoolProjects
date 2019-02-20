@@ -10,11 +10,11 @@ public class Block {
         stift.setzeFarbe(Farbe.ROT);
         stift.setzeFuellMuster(1);
 
-        stift.bewegeBis((stelle * 100) + 50, 70);
+        stift.bewegeBis((stelle * 100) + 55, 75);
         stift.runter();
         stift.zeichneRechteck(20, 20);
         stift.hoch();
-        stift.bewegeBis((stelle * 100) + 50, 130);
+        stift.bewegeBis((stelle * 100) + 55, 135);
         stift.runter();
         stift.zeichneRechteck(20, 20);
         stift.hoch();
@@ -30,6 +30,7 @@ public class Block {
         //Draw the needed Block
         switch (blockNo)
         {
+            /////////////////Horizontal Blocks/////////////////
             case 0:
                 stift.bewegeBis((stelle * 100) + 40, 50);
                 stift.runter();
@@ -45,7 +46,7 @@ public class Block {
                 stift.runter();
                 stift.zeichneRechteck(50, 10);
                 break;
-
+            /////////////////Vertical Blocks Top/////////////////
             case 1:
                 stift.bewegeBis((stelle * 100) + 30, 60);
                 stift.runter();
@@ -58,6 +59,7 @@ public class Block {
                 stift.zeichneRechteck(10, 50);
                 break;
 
+            /////////////////Vertical Blocks Bottom/////////////////
             case 4:
                 stift.bewegeBis((stelle * 100) + 30, 120);
                 stift.runter();
